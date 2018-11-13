@@ -1,0 +1,40 @@
+$(window).keypress(function(e) {
+       var key = e.which;
+       console.log(key)
+   });
+
+
+
+$('iframe').contents().find('body').keypress(function (e) {
+    if(e.which == 13 && !e.shiftKey) {    
+	e.preventDefault();  
+	$('#save-temp').click()
+    }
+});
+
+$('iframe').contents().find('body').keypress(function (e) {
+    if(e.which == 42) {    
+	e.preventDefault();  
+	$('tr.success').click()
+    }
+});
+
+const nextValidSeg = () => {
+  $('tr.success').next().click()
+  if( !!$('tr.success .wavesurfer-tier-Comments span[value=Valid]')  ) {
+  	$('tr.success').next().click()
+  }
+}
+
+
+curr = parseInt($('tr.success .wavesurfer-id').text())
+
+
+
+$('tr#wavesurfer-time-EDU' + curr)
+
+$('tr .wavesurfer-tier-Comments span[value=Valid]').parent().parent()
+
+
+
+
