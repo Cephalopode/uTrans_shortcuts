@@ -1,8 +1,8 @@
-$(window).keypress(function(e) {
-      e.preventDefault(); 
-       var key = e.which;
-       console.log(key)
-   });
+// $(window).keypress(function(e) {
+//       e.preventDefault(); 
+//        var key = e.which;
+//        console.log(key)
+//    });
 
 
 let nextValidSeg = () => {
@@ -19,7 +19,7 @@ let cursorToEnd = () => {
 }
 
 
-//save and next
+//save and next : return 
 $('iframe').contents().find('body').keypress(function (e) {
     if(e.which == 13 && !e.shiftKey) {    
     	e.preventDefault();  
@@ -33,7 +33,7 @@ $('iframe').contents().find('body').keypress(function (e) {
     }
 });
 
-//replay
+//replay : /
 $('iframe').contents().find('body').keypress(function (e) {
     if(e.which == 47 ) {    
     	e.preventDefault();  
@@ -43,7 +43,7 @@ $('iframe').contents().find('body').keypress(function (e) {
     }
 });
 
-//next
+//next : * 
 $('iframe').contents().find('body').keypress(function (e) {
     if(e.which == 42) {    
       e.preventDefault();  
@@ -51,19 +51,17 @@ $('iframe').contents().find('body').keypress(function (e) {
     }
 });
 
-//pause/play dollar
+//pause/play $
 $('iframe').contents().find('body').keypress(function (e) {
     if(e.which == 36) {    
       e.preventDefault();  
       $('button').click()
     }
-});
+}); 
 
 
 
 // curr = parseInt($('tr.success .wavesurfer-id').text())
-
-
 
 // $('tr#wavesurfer-time-EDU' + curr)
 
