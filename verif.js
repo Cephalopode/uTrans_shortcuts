@@ -6,7 +6,7 @@ for (let i = 0; i < $(tbod).length; i++) {
 	//console.log($(tbod+':eq('+i+') td:eq(5)').text)
 	if(!!$(tbod+':eq('+i+') td:eq(4)')[0].innerText.match('OK\\(100\\)')) {
 		id = parseInt($(tbod+':eq('+i+') td:eq(0)')[0].innerText)
-		if(id >= 0 && id <= 11116) {
+		if(id <= 11116) {
 			str=$(tbod+':eq('+i+') td:eq(5)')[0].innerText.match('Valid: (.+?) Millisecond')[1]
 			total += parseInt(str)
 			//console.log(i + ": " + str)
@@ -58,7 +58,7 @@ page 2
 4616.095 / 3600 * 800 = 3248.02
 ========================
 
-debut => 11116
+debut（2821） => 11116
 509.027
 1035.981
 1725.669
@@ -73,5 +73,9 @@ debut => 11116
 
 11118 => 17399
 3047.9535 元 （mais elle m'a donne 3248)
+
+17420 => 22142
+962.61 元 (mais elle m'a donne 962)
+
 
 
