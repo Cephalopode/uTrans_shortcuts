@@ -6,7 +6,7 @@ for (let i = 0; i < $(tbod).length; i++) {
 	//console.log($(tbod+':eq('+i+') td:eq(5)').text)
 	if(!!$(tbod+':eq('+i+') td:eq(4)')[0].innerText.match('OK\\(100\\)')) {
 		id = parseInt($(tbod+':eq('+i+') td:eq(0)')[0].innerText)
-		if(id <= 11116) {
+		if(id >= 10292 && id <= 11116) {
 			str=$(tbod+':eq('+i+') td:eq(5)')[0].innerText.match('Valid: (.+?) Millisecond')[1]
 			total += parseInt(str)
 			//console.log(i + ": " + str)
@@ -59,17 +59,12 @@ page 2
 ========================
 
 debut（2821） => 11116
-509.027
-1035.981
-1725.669
+1334.62
 3050.83
 792.017
-
-= 1383.1852222222221 元   (mais elle m'a donne juste 1059)
+= 1150.548 (mais elle m'a donne 1059)
 =======================
 
-debut => 11116
-1059 元
 
 11118 => 17399
 3047.9535 元 （mais elle m'a donne 3248)
@@ -77,5 +72,15 @@ debut => 11116
 17420 => 22142
 962.61 元 (mais elle m'a donne 962)
 
+
+
+
+First month error :
+// 509.027
+// 1035.981
+// 1725.669
+// 3050.83
+// 792.017
+// = 1383.1852222222221 元   (mais elle m'a donne juste 1059)
 
 
